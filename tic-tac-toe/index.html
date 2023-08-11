@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Крестики-нолики</title>
+</head>
+
+<body>
+
+  <h1 class="game-name">Крестики-нолики</h1>
+
+  <div class="playerX">
+    <label class="player__name" for="playerX">Имя игрока X: </label>
+    <input class="player__field" type="text" id="playerX" placeholder="Игрок X">
+  </div>
+
+  <div class="playerY">
+    <label class="player__name" for="playerO">Имя игрока O: </label>
+    <input class="player__field" type="text" id="playerO" placeholder="Игрок O">
+  </div>
+
+  <button class="button" onclick="startGame()">Начать игру</button>
+  <a class="reset" href="index.html">Запустить игру заново</a>
+  
+  <div id="choose-starter" style="display: none;">
+    <p class="choose__text">Выберите, кто начнет игру:</p>
+    <button class="button" onclick="setStarter('X')">Игрок X</button>
+    <button class="button" onclick="setStarter('O')">Игрок O</button>
+  </div>
+
+  <div class="game-board" id="game-board">
+    <div class="cell" onclick="makeMove(0, 0)"></div>
+    <div class="cell" onclick="makeMove(0, 1)"></div>
+    <div class="cell" onclick="makeMove(0, 2)"></div>
+    <div class="cell" onclick="makeMove(1, 0)"></div>
+    <div class="cell" onclick="makeMove(1, 1)"></div>
+    <div class="cell" onclick="makeMove(1, 2)"></div>
+    <div class="cell" onclick="makeMove(2, 0)"></div>
+    <div class="cell" onclick="makeMove(2, 1)"></div>
+    <div class="cell" onclick="makeMove(2, 2)"></div>
+  </div>
+  <p class="result" id="result"></p>
+  <script src="script.js"></script>
+</body>
+
+</html>
